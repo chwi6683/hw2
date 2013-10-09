@@ -10,11 +10,9 @@ class MoviesController < ApplicationController
      case params[:sort]
      when 'title'
           @movies = Movie.all(:order => 'movies.title')
-          @title = 'hilite'
     
      when 'release_date'
           @movies = Movie.all(:order => 'movies.release_date')
-          @release_date = 'hilite'
   
      else
           @movies = Movie.all
